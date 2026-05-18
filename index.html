@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S S Homestay | Tirupati</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem; /* Accounts for the height of the sticky navbar */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f0e6; /* Rich champagne/cream for a royal look */
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Navbar -->
+    <nav id="main-nav" class="bg-white sticky top-0 z-50 transition-all duration-300 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="nav-container" class="flex justify-between h-20 items-center transition-all duration-300">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <i class="fa-solid fa-house-chimney text-amber-600 text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight text-indigo-950 font-serif">SS HOMESTAY</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#overview" class="nav-link text-indigo-950 font-medium border-b-2 border-amber-600 px-1 py-5 transition-colors">Overview</a>
+                    <a href="#prices" class="nav-link text-gray-500 hover:text-indigo-950 font-medium border-b-2 border-transparent px-1 py-5 transition-colors">Location</a>
+                    <a href="#rules" class="nav-link text-gray-500 hover:text-indigo-950 font-medium border-b-2 border-transparent px-1 py-5 transition-colors">Rules</a>
+                    <a href="#reviews" class="nav-link text-gray-500 hover:text-indigo-950 font-medium border-b-2 border-transparent px-1 py-5 transition-colors">Reviews</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Header Section -->
+        <div id="overview" class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4">
+            <div>
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="bg-amber-100 text-amber-900 text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wide">Home Stay</span>
+                    <div class="flex items-center text-sm font-medium">
+                        <i class="fa-solid fa-star text-amber-500 mr-1"></i>
+                        <span>4.8</span>
+                        <a href="#reviews" class="text-gray-500 ml-1 underline hover:text-gray-700">(36 reviews)</a>
+                    </div>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold text-indigo-950 font-serif">S S Homestay</h1>
+            </div>
+            
+            <!-- Quick Actions -->
+            <div class="flex flex-wrap gap-2">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=S+S+Homestay,+SV+Auto+Nagar,+Tirupati" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-white border border-gray-300 rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-50 transition">
+                    <i class="fa-solid fa-diamond-turn-right text-indigo-700"></i> Directions
+                </a>
+                <button id="save-btn" class="flex items-center gap-2 bg-white border border-gray-300 rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-50 transition">
+                    <i class="fa-regular fa-heart text-rose-500"></i> Save
+                </button>
+                <button id="share-btn" class="flex items-center gap-2 bg-white border border-gray-300 rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-50 transition">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-gray-600"></i> Share
+                </button>
+                <button id="view-all-photos-btn" class="flex items-center gap-2 bg-white border border-gray-300 rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-50 transition">
+                    <i class="fa-solid fa-images text-gray-600"></i> Photos
+                </button>
+            </div>
+        </div>
+
+        <!-- Photo Gallery (Placeholders) -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-2 h-64 md:h-96 mb-8 rounded-2xl overflow-hidden">
+            <div class="md:col-span-2 h-full overflow-hidden relative bg-black">
+                <img src="Outside.avif" alt="Homestay Exterior" class="gallery-img w-full h-full object-cover scale-[1.7] hover:scale-[1.8] transition duration-500 cursor-pointer">
+            </div>
+            <div class="hidden md:grid grid-rows-2 gap-2 h-full">
+                <div class="w-full h-full overflow-hidden relative bg-black">
+                    <img src="BIGGROOM.avif" alt="Room" class="gallery-img w-full h-full object-cover scale-[1.7] hover:scale-[1.8] transition duration-500 cursor-pointer">
+                </div>
+                <div class="w-full h-full overflow-hidden relative bg-black">
+                    <img src="bathroom.avif" alt="Bathroom" class="gallery-img w-full h-full object-cover scale-[1.7] hover:scale-[1.8] transition duration-500 cursor-pointer">
+                </div>
+            </div>
+            <div class="hidden md:grid grid-rows-2 gap-2 h-full relative">
+                <div class="w-full h-full overflow-hidden relative bg-black">
+                    <img src="common area.avif" alt="Living Area" class="gallery-img w-full h-full object-cover scale-[1.7] hover:scale-[1.8] transition duration-500 cursor-pointer">
+                </div>
+                <div class="w-full h-full overflow-hidden relative group cursor-pointer bg-black">
+                    <img src="dining.avif" alt="Balcony" class="gallery-img w-full h-full object-cover scale-[1.7] group-hover:scale-[1.8] transition duration-500">
+                    <div class="gallery-overlay absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-50 transition">
+                        <span class="text-white font-medium flex items-center gap-2"><i class="fa-solid fa-images"></i> All Photos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content & Sidebar -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            
+            <!-- Left Column: Details -->
+            <div class="lg:col-span-2 space-y-10">
+                
+                <!-- Location Info -->
+                <section class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h2 class="text-2xl font-bold mb-4 text-indigo-950 font-serif">Location</h2>
+                    <div class="space-y-4">
+                        <div class="flex gap-4 items-start">
+                            <div class="bg-indigo-50 p-3 rounded-full text-indigo-700 mt-1">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-700">Sivaiah Nialayam, 22-11-46/2A3, Renigunta Rd, behind Nexa Showroom, Gollavanigunta, SV Auto Nagar, Tirupati, Andhra Pradesh 517501</p>
+                                <p class="text-sm text-gray-500 mt-1">Neighborhood: SV Auto Nagar • <span class="font-medium text-amber-700">2.8 Good for visitors</span></p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <div class="bg-emerald-50 p-3 rounded-full text-emerald-700">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <p class="text-gray-700 font-medium">97383 82622</p>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <div class="bg-amber-50 p-3 rounded-full text-amber-700">
+                                <i class="fa-solid fa-map-pin"></i>
+                            </div>
+                            <p class="text-gray-700">JCHX+R9 Tirupati, Andhra Pradesh <span class="text-sm text-gray-400">(Plus Code)</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="mt-6 w-full h-64 rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=S%20S%20Homestay,%20SV%20Auto%20Nagar,%20Tirupati&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    
+                    <!-- Map Actions -->
+                    <div class="mt-6 flex flex-wrap gap-3 border-t pt-4">
+                        <button class="text-sm font-medium text-indigo-700 hover:text-indigo-900"><i class="fa-solid fa-clock-rotate-left mr-1"></i> Your Maps history</button>
+                        <button class="text-sm font-medium text-indigo-700 hover:text-indigo-900"><i class="fa-solid fa-tag mr-1"></i> Add a label</button>
+                        <button class="text-sm font-medium text-indigo-700 hover:text-indigo-900"><i class="fa-solid fa-pen mr-1"></i> Suggest an edit</button>
+                        <button class="text-sm font-medium text-indigo-700 hover:text-indigo-900">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=S+S+Homestay,+SV+Auto+Nagar,+Tirupati" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-white border border-gray-300 rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-50 transition">
+                        <i class="fa-solid fa-diamond-turn-right text-indigo-700"></i> Directions
+                        </a>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Nearby Places -->
+                <section class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h2 class="text-2xl font-bold mb-4 text-indigo-950 font-serif">Nearby Places</h2>
+                    
+                    <!-- Visible Top Places -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2">
+                            <div class="flex items-start gap-2 pr-2">
+                                <i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i>
+                                <span class="text-gray-700 leading-tight">AROMAA PARADISE</span>
+                            </div>
+                            <span class="text-gray-500 font-medium whitespace-nowrap">0.16 km</span>
+                        </div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2">
+                            <div class="flex items-start gap-2 pr-2">
+                                <i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i>
+                                <span class="text-gray-700 leading-tight">Smiley Chicken Point</span>
+                            </div>
+                            <span class="text-gray-500 font-medium whitespace-nowrap">0.22 km</span>
+                        </div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2">
+                            <div class="flex items-start gap-2 pr-2">
+                                <i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i>
+                                <span class="text-gray-700 leading-tight">RS Fast Foods</span>
+                            </div>
+                            <span class="text-gray-500 font-medium whitespace-nowrap">0.26 km</span>
+                        </div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2">
+                            <div class="flex items-start gap-2 pr-2">
+                                <i class="fa-solid fa-car text-gray-400 mt-1 w-4 text-center"></i>
+                                <span class="text-gray-700 leading-tight">Harsha driving school</span>
+                            </div>
+                            <span class="text-gray-500 font-medium whitespace-nowrap">0.28 km</span>
+                        </div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2">
+                            <div class="flex items-start gap-2 pr-2">
+                                <i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i>
+                                <span class="text-gray-700 leading-tight">Nisar's Bismillah fried chicken</span>
+                            </div>
+                            <span class="text-gray-500 font-medium whitespace-nowrap">0.29 km</span>
+                        </div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2">
+                            <div class="flex items-start gap-2 pr-2">
+                                <i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i>
+                                <span class="text-gray-700 leading-tight">Macha Murali Military Tiffin stall</span>
+                            </div>
+                            <span class="text-gray-500 font-medium whitespace-nowrap">0.41 km</span>
+                        </div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2">
+                            <div class="flex items-start gap-2 pr-2">
+                                <i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i>
+                                <span class="text-gray-700 leading-tight">DHANA LAKSHMI HOTEL</span>
+                            </div>
+                            <span class="text-gray-500 font-medium whitespace-nowrap">0.45 km</span>
+                        </div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2">
+                            <div class="flex items-start gap-2 pr-2">
+                                <i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i>
+                                <span class="text-gray-700 leading-tight">Hotel Dhurvika</span>
+                            </div>
+                            <span class="text-gray-500 font-medium whitespace-nowrap">0.58 km</span>
+                        </div>
+                    </div>
+
+                    <!-- Hidden Places -->
+                    <div id="more-places" class="hidden grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mt-4">
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2"><div class="flex items-start gap-2 pr-2"><i class="fa-solid fa-location-dot text-gray-400 mt-1 w-4 text-center"></i><span class="text-gray-700 leading-tight">MASHA ALLAH</span></div><span class="text-gray-500 font-medium whitespace-nowrap">0.60 km</span></div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2"><div class="flex items-start gap-2 pr-2"><i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i><span class="text-gray-700 leading-tight">BIRYANI CENTER</span></div><span class="text-gray-500 font-medium whitespace-nowrap">0.65 km</span></div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2"><div class="flex items-start gap-2 pr-2"><i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i><span class="text-gray-700 leading-tight">హరి చికెన్ సెంటర్</span></div><span class="text-gray-500 font-medium whitespace-nowrap">0.72 km</span></div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2"><div class="flex items-start gap-2 pr-2"><i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i><span class="text-gray-700 leading-tight">Akshi Dum Bhiryani Point</span></div><span class="text-gray-500 font-medium whitespace-nowrap">0.74 km</span></div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2"><div class="flex items-start gap-2 pr-2"><i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i><span class="text-gray-700 leading-tight">S Ismail Chicken Center</span></div><span class="text-gray-500 font-medium whitespace-nowrap">0.74 km</span></div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2"><div class="flex items-start gap-2 pr-2"><i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i><span class="text-gray-700 leading-tight">GK CHICKEN PAKODA CENTRE</span></div><span class="text-gray-500 font-medium whitespace-nowrap">0.75 km</span></div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2"><div class="flex items-start gap-2 pr-2"><i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i><span class="text-gray-700 leading-tight">SRISIVAKAMIMESS</span></div><span class="text-gray-500 font-medium whitespace-nowrap">0.75 km</span></div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2"><div class="flex items-start gap-2 pr-2"><i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i><span class="text-gray-700 leading-tight">SAI BALAJI MESS</span></div><span class="text-gray-500 font-medium whitespace-nowrap">0.76 km</span></div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2"><div class="flex items-start gap-2 pr-2"><i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i><span class="text-gray-700 leading-tight">ANU FAST FOODS</span></div><span class="text-gray-500 font-medium whitespace-nowrap">0.77 km</span></div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2"><div class="flex items-start gap-2 pr-2"><i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i><span class="text-gray-700 leading-tight">BISMILLAH CHICKEN CENTER</span></div><span class="text-gray-500 font-medium whitespace-nowrap">0.81 km</span></div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2"><div class="flex items-start gap-2 pr-2"><i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i><span class="text-gray-700 leading-tight">SRI ANNAPURNA</span></div><span class="text-gray-500 font-medium whitespace-nowrap">0.81 km</span></div>
+                        <div class="flex justify-between items-start text-sm border-b border-gray-50 pb-2"><div class="flex items-start gap-2 pr-2"><i class="fa-solid fa-utensils text-gray-400 mt-1 w-4 text-center"></i><span class="text-gray-700 leading-tight">Ak Raju tiffin centre</span></div><span class="text-gray-500 font-medium whitespace-nowrap">0.83 km</span></div>
+                    </div>
+                    
+                    <button id="toggle-places-btn" class="mt-5 text-sm font-bold text-amber-700 hover:text-amber-900 transition flex items-center gap-1">
+                        Show more (12) <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>
+                    </button>
+                </section>
+
+                <!-- House Rules & Information -->
+                <section id="rules" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h2 class="text-2xl font-bold mb-6 text-indigo-950 font-serif">House Rules & Information</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Must Read Rules -->
+                        <div>
+                            <h3 class="font-bold text-indigo-950 mb-3 flex items-center gap-2"><i class="fa-solid fa-circle-exclamation text-rose-600"></i> Must Read Rules</h3>
+                            <ul class="list-disc list-outside text-sm text-gray-700 space-y-1.5 ml-4">
+                                <li>Primary Guest should be atleast 18 years of age.</li>
+                                <li>Groups with only male guests are allowed at the property.</li>
+                                <li>Passport, Aadhaar, Driving License and Govt. ID are accepted as ID proof(s).</li>
+                                <li>Pets are not allowed.</li>
+                                <li>Smoking within the premises is not allowed.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Guest Profile & ID -->
+                        <div>
+                            <h3 class="font-bold text-indigo-950 mb-3 flex items-center gap-2"><i class="fa-solid fa-user-check text-indigo-600"></i> Guest Profile</h3>
+                            <ul class="list-disc list-outside text-sm text-gray-700 space-y-1.5 ml-4">
+                                <li>Unmarried couples are allowed in standard and hourly stay rooms.</li>
+                                <li>Local ids are allowed.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Accessibility & Check-in -->
+                        <div>
+                            <h3 class="font-bold text-indigo-950 mb-3 flex items-center gap-2"><i class="fa-solid fa-house-user text-emerald-600"></i> Check-in & Accessibility</h3>
+                            <ul class="list-disc list-outside text-sm text-gray-700 space-y-1.5 ml-4">
+                                <li>Host or Caretaker Greets You & Helps You Check-in.</li>
+                                <li>Self check-in via Smart Door is not available.</li>
+                                <li>This property is not accessible to guests who use a wheelchair. Please make arrangements accordingly.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Other Rules -->
+                        <div>
+                            <h3 class="font-bold text-indigo-950 mb-3 flex items-center gap-2"><i class="fa-solid fa-ban text-slate-600"></i> Other Rules</h3>
+                            <ul class="list-disc list-outside text-sm text-gray-700 space-y-1.5 ml-4">
+                                <li>Does not allow private parties or events.</li>
+                                <li>Guests are requested not to invite outside visitors in the room during their stay.</li>
+                                <li>There are no pets living on the property.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reviews Summary -->
+                <section id="reviews" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold text-indigo-950 font-serif">Main Google Reviews</h2>
+                    </div>
+                    
+                    <div class="flex items-center gap-8">
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-indigo-950">4.8</div>
+                            <div class="flex text-amber-500 my-2 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <div class="text-sm text-gray-500">36 reviews</div>
+                        </div>
+                        
+                        <div class="flex-1 space-y-2">
+                            <!-- Review Bars -->
+                            <div class="flex items-center gap-2 text-sm"><span class="w-3">5</span><div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden"><div class="bg-amber-500 w-11/12 h-full rounded-full"></div></div></div>
+                            <div class="flex items-center gap-2 text-sm"><span class="w-3">4</span><div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden"><div class="bg-amber-500 w-2/12 h-full rounded-full"></div></div></div>
+                            <div class="flex items-center gap-2 text-sm"><span class="w-3">3</span><div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden"><div class="bg-amber-500 w-0 h-full rounded-full"></div></div></div>
+                            <div class="flex items-center gap-2 text-sm"><span class="w-3">2</span><div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden"><div class="bg-amber-500 w-0 h-full rounded-full"></div></div></div>
+                            <div class="flex items-center gap-2 text-sm"><span class="w-3">1</span><div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden"><div class="bg-amber-500 w-1/12 h-full rounded-full"></div></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Review Tags / Topics -->
+                    <div class="flex flex-wrap gap-2 mt-8 mb-6">
+                        <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-100 transition"><i class="fa-solid fa-broom text-gray-400 mr-1"></i> clean rooms (5)</span>
+                        <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-100 transition"><i class="fa-solid fa-users text-gray-400 mr-1"></i> friendly staff (6)</span>
+                        <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-100 transition"><i class="fa-solid fa-bed text-gray-400 mr-1"></i> comfortable stay (4)</span>
+                        <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-100 transition"><i class="fa-solid fa-wallet text-gray-400 mr-1"></i> budget (3)</span>
+                        <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-100 transition"><i class="fa-solid fa-house text-gray-400 mr-1"></i> feeling at home (3)</span>
+                        <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-100 transition"><i class="fa-solid fa-wifi text-gray-400 mr-1"></i> wifi (3)</span>
+                        <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-100 transition">warm hosts (2)</span>
+                        <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-100 transition">spacious rooms (2)</span>
+                        <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-100 transition">family stay (2)</span>
+                        <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-100 transition">kitchen (2)</span>
+                    </div>
+
+                    <!-- Reviews List (Horizontal Scroll Cards) -->
+                    <div class="flex overflow-x-auto hide-scrollbar gap-6 pb-6">
+                        
+                        <!-- Review 1 -->
+                        <div class="w-[320px] sm:w-[400px] flex-shrink-0 border border-gray-200 bg-white rounded-2xl p-6 flex flex-col shadow-sm">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold">K</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-sm">Kantasai</h4>
+                                    <div class="flex items-center gap-2 text-xs text-gray-500 mt-0.5">
+                                        <span class="flex text-amber-400 text-[10px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                        <span>• 3 months ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm mb-6 leading-relaxed flex-1">S s homestay is a good budget-friendly choice for a family stay in tirupati, with clean rooms and friendly service, hi speed wifi , everything perfect here</p>
+                            
+                            <!-- Owner Response -->
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 mt-auto">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-reply text-gray-400 text-xs"></i>
+                                    <span class="font-bold text-gray-900 text-xs">Response from the owner</span>
+                                    <span class="text-gray-500 text-xs">• a week ago</span>
+                                </div>
+                                <p class="text-gray-600 text-xs leading-relaxed">Thank you for your kind feedback! We're glad you found our homestay budget-friendly and perfect for a family stay. Happy to hear you liked the cleanliness, service, and high-speed Wi-Fi.</p>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="w-[320px] sm:w-[400px] flex-shrink-0 border border-gray-200 bg-white rounded-2xl p-6 flex flex-col shadow-sm">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-full bg-pink-100 text-pink-700 flex items-center justify-center font-bold">A</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-sm">Anitha Chowdary</h4>
+                                    <div class="flex items-center gap-2 text-xs text-gray-500 mt-0.5">
+                                        <span class="flex text-amber-400 text-[10px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                        <span>• 9 months ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm mb-6 leading-relaxed flex-1">Had a truly wonderful stay at SS Homestay! The place was clean, peaceful, and felt just like home. The hosts were incredibly warm, welcoming, and always ready to help with anything we needed. The rooms were spacious and well-maintained...</p>
+                            
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 mt-auto">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-reply text-gray-400 text-xs"></i>
+                                    <span class="font-bold text-gray-900 text-xs">Response from the owner</span>
+                                    <span class="text-gray-500 text-xs">• 8 months ago</span>
+                                </div>
+                                <p class="text-gray-600 text-xs leading-relaxed">Thank you so much for your heartfelt review! We're truly happy to know you had a wonderful and comfortable stay at SS Homestay. It means a lot to us that you felt at home and enjoyed the peaceful atmosphere, spacious rooms, and our hospitality. We’ll be delighted to welcome you back anytime!</p>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="w-[320px] sm:w-[400px] flex-shrink-0 border border-gray-200 bg-white rounded-2xl p-6 flex flex-col shadow-sm">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold">E</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-sm">Eetharam Boy's</h4>
+                                    <div class="flex items-center gap-2 text-xs text-gray-500 mt-0.5">
+                                        <span class="flex text-amber-400 text-[10px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                        <span>• 2 months ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm mb-6 leading-relaxed flex-1">Friendly staff and beautiful location from the top view and also high speed Wi-Fi. Thanks for the hospitality</p>
+                            
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 mt-auto">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-reply text-gray-400 text-xs"></i>
+                                    <span class="font-bold text-gray-900 text-xs">Response from the owner</span>
+                                    <span class="text-gray-500 text-xs">• a week ago</span>
+                                </div>
+                                <p class="text-gray-600 text-xs leading-relaxed">Thank you for your kind feedback! We're glad you enjoyed our friendly staff, the beautiful top view, and high-speed Wi-Fi. It was a pleasure hosting you.</p>
+                            </div>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="w-[320px] sm:w-[400px] flex-shrink-0 border border-gray-200 bg-white rounded-2xl p-6 flex flex-col shadow-sm">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-700 flex items-center justify-center font-bold">V</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-sm">Vasu thummalapalli</h4>
+                                    <div class="flex items-center gap-2 text-xs text-gray-500 mt-0.5">
+                                        <span class="flex text-amber-400 text-[10px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <span>• 9 months ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm mb-6 leading-relaxed flex-1">Extremely Disappointing Stay – Avoid This Place. I had a very unpleasant experience at this property. When I arrived, the owner...</p>
+                            
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 mt-auto">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-reply text-gray-400 text-xs"></i>
+                                    <span class="font-bold text-gray-900 text-xs">Response from the owner</span>
+                                    <span class="text-gray-500 text-xs">• 9 months ago</span>
+                                </div>
+                                <p class="text-gray-600 text-xs leading-relaxed">Dear Mr. Vasu, Thank you for reaching out. Unfortunately, we cannot find any booking under your name in our records. Could you please send us the booking ID or reservation...</p>
+                            </div>
+                        </div>
+
+                        <!-- Review 5 -->
+                        <div class="w-[320px] sm:w-[400px] flex-shrink-0 border border-gray-200 bg-white rounded-2xl p-6 flex flex-col shadow-sm">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold">G</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-sm">Gevini Subramanyam</h4>
+                                    <div class="flex items-center gap-2 text-xs text-gray-500 mt-0.5">
+                                        <span class="flex text-amber-400 text-[10px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                        <span>• 3 months ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm mb-6 leading-relaxed flex-1">I went my family I feel like home, well maintained, good service, this is my 2nd visit every time I feel like my home, friendly staff.</p>
+                            
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 mt-auto">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-reply text-gray-400 text-xs"></i>
+                                    <span class="font-bold text-gray-900 text-xs">Response from the owner</span>
+                                    <span class="text-gray-500 text-xs">• a week ago</span>
+                                </div>
+                                <p class="text-gray-600 text-xs leading-relaxed">Thank you for choosing us again! We're delighted to know that you and your family felt at home during your stay. Your kind words about our service and staff mean a lot to us.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Review 6 -->
+                        <div class="w-[320px] sm:w-[400px] flex-shrink-0 border border-gray-200 bg-white rounded-2xl p-6 flex flex-col shadow-sm">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold">D</div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 text-sm">Dora Babu</h4>
+                                    <div class="flex items-center gap-2 text-xs text-gray-500 mt-0.5">
+                                        <span class="flex text-amber-400 text-[10px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                        <span>• 4 months ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 text-sm mb-6 leading-relaxed flex-1">I stayed my friends there is no complaint evrything perfect, i feel like home</p>
+                            
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 mt-auto">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-reply text-gray-400 text-xs"></i>
+                                    <span class="font-bold text-gray-900 text-xs">Response from the owner</span>
+                                    <span class="text-gray-500 text-xs">• a week ago</span>
+                                </div>
+                                <p class="text-gray-600 text-xs leading-relaxed">Thank you for your kind words! We're glad you and your friends had a perfect stay and felt at home. Hope to host you again soon.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+            <!-- Right Column: Booking Widget (Sticky) -->
+            <div class="lg:col-span-1 relative">
+                <div id="prices" class="sticky top-24 bg-white p-6 rounded-2xl shadow-xl shadow-indigo-900/5 border border-amber-200">
+                    <h3 class="text-xl font-bold mb-4 text-indigo-950 font-serif">Book Directly with Owner</h3>
+                    
+                    <!-- Contact Owner Section -->
+                    <div class="space-y-3">
+                            <a href="tel:09738382622" class="flex items-center gap-3 hover:bg-gray-50 p-2 -mx-2 rounded-lg transition">
+                                <div class="w-8 h-8 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-700">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Call or WhatsApp</div>
+                                    <div class="text-sm font-bold text-indigo-950">97383 82622</div>
+                                </div>
+                            </a>
+                            <a href="mailto:contact@sshomestay.com" class="flex items-center gap-3 hover:bg-gray-50 p-2 -mx-2 rounded-lg transition">
+                                <div class="w-8 h-8 rounded-full bg-amber-50 flex items-center justify-center text-amber-700">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Email Inquiry</div>
+                                    <div class="text-sm font-bold text-indigo-950">contact@sshomestay.com</div>
+                                </div>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-950 text-indigo-200 py-12 mt-12 border-t-4 border-amber-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Brand & About -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-house-chimney text-amber-500 text-2xl"></i>
+                        <span class="font-bold text-2xl text-amber-400 tracking-tight font-serif">StayScout</span>
+                    </div>
+                    <p class="text-sm text-indigo-200/80 leading-relaxed mb-4 pr-4">
+                        S S Homestay offers a comfortable, clean, and budget-friendly stay in Tirupati. Experience a home away from home with top-notch amenities and warm hospitality.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-indigo-300 hover:text-amber-400 transition"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-indigo-300 hover:text-amber-400 transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-indigo-300 hover:text-amber-400 transition"><i class="fa-brands fa-twitter text-xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-amber-400 font-bold mb-4 font-serif text-lg">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#overview" class="hover:text-amber-300 transition">Overview</a></li>
+                        <li><a href="#prices" class="hover:text-amber-300 transition">Location</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-300 transition">Guest Reviews</a></li>
+                        <li><a href="#rules" class="hover:text-amber-300 transition">Policies & Rules</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-amber-400 font-bold mb-4 font-serif text-lg">Contact Info</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-amber-500"></i>
+                            <span>22-11-46/2A3, Renigunta Rd, behind Nexa Showroom, Gollavanigunta, SV Auto Nagar, Tirupati, AP 517501</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-amber-500"></i>
+                            <span>97383 82622</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-amber-500"></i>
+                            <span>contact@sshomestay.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright & Legal -->
+            <div class="border-t border-indigo-900 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-indigo-400">
+                <p>&copy; 2024 S S Homestay. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-amber-300 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-amber-300 transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Popup Modal -->
+    <div id="image-modal" class="fixed inset-0 z-[100] bg-black/95 hidden flex items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300">
+        <button id="close-modal" class="absolute top-6 right-6 text-white text-4xl hover:text-gray-300 transition leading-none">&times;</button>
+        <img id="modal-img" src="" alt="Expanded Image" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl">
+    </div>
+
+    <!-- All Photos Modal (Grid) -->
+    <div id="all-photos-modal" class="fixed inset-0 z-[90] bg-white hidden flex-col transition-opacity duration-300 overflow-y-auto">
+        <div class="sticky top-0 bg-white/90 backdrop-blur-sm border-b border-gray-200 px-6 py-4 flex justify-between items-center z-10">
+            <h2 class="text-xl font-bold text-indigo-950 font-serif">All Photos</h2>
+            <button id="close-all-photos" class="text-gray-500 hover:text-gray-900 transition text-4xl leading-none">&times;</button>
+        </div>
+        <div class="p-6 max-w-7xl mx-auto w-full">
+            <div id="all-photos-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Images injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            // Order of sections is important here so the later sections override earlier ones as you scroll down
+            const sectionIds = ['overview', 'prices', 'rules', 'reviews'];
+            
+            const mainNav = document.getElementById('main-nav');
+            const navContainer = document.getElementById('nav-container');
+
+            window.addEventListener('scroll', () => {
+                // Navbar Shrink & Style Animation
+                if (window.scrollY > 20) {
+                    mainNav.classList.add('shadow-md', 'bg-white/95', 'backdrop-blur-md', 'border-gray-200');
+                    mainNav.classList.remove('bg-white', 'border-transparent');
+                    navContainer.classList.replace('h-20', 'h-16');
+                } else {
+                    mainNav.classList.remove('shadow-md', 'bg-white/95', 'backdrop-blur-md', 'border-gray-200');
+                    mainNav.classList.add('bg-white', 'border-transparent');
+                    navContainer.classList.replace('h-16', 'h-20');
+                }
+
+                let current = 'overview'; // Default to top section
+
+                sectionIds.forEach(id => {
+                    const section = document.getElementById(id);
+                    if (section) {
+                        const rect = section.getBoundingClientRect();
+                        // If the section is somewhat near the top of the viewport (under the sticky header)
+                        if (rect.top <= 250 && rect.bottom >= 100) {
+                            current = id;
+                        }
+                    }
+                });
+
+                // Toggle Tailwind classes on links
+                navLinks.forEach(link => {
+                    const isMatch = link.getAttribute('href') === `#${current}`;
+                    link.classList.toggle('text-indigo-950', isMatch);
+                    link.classList.toggle('border-amber-600', isMatch);
+                    link.classList.toggle('text-gray-500', !isMatch);
+                    link.classList.toggle('border-transparent', !isMatch);
+                });
+            });
+
+            // Image Modal Logic
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            const closeBtn = document.getElementById('close-modal');
+            const allPhotosModal = document.getElementById('all-photos-modal');
+            
+            const openModal = (src) => {
+                modalImg.src = src;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            };
+
+            const closeModal = () => {
+                modal.classList.add('hidden');
+                if (allPhotosModal.classList.contains('hidden')) {
+                    document.body.style.overflow = ''; // Restore scrolling only if grid is also closed
+                }
+            };
+
+            // Attach click events to all images
+            document.querySelectorAll('.gallery-img').forEach(img => {
+                img.addEventListener('click', (e) => openModal(e.target.src));
+            });
+
+            // All Photos Gallery Logic
+            // Note: Browsers cannot read local directories automatically for security reasons. 
+            // You must list the image filenames you want to show here:
+            const allImageFiles = [
+                'Outside.avif', 'BIGGROOM.avif', 'bathroom.avif', 
+                'common area.avif', 'dining.avif', 'room.png', 'poster.jpg'
+            ];
+
+            const allPhotosGrid = document.getElementById('all-photos-grid');
+            const viewAllPhotosBtn = document.getElementById('view-all-photos-btn');
+            const closeAllPhotosBtn = document.getElementById('close-all-photos');
+
+            const openAllPhotosModal = () => {
+                if (allPhotosGrid.innerHTML === '') {
+                    allImageFiles.forEach(src => {
+                        const imgWrapper = document.createElement('div');
+                        imgWrapper.className = 'aspect-square rounded-xl overflow-hidden bg-gray-100 cursor-pointer hover:opacity-90 transition shadow-sm';
+                        
+                        const img = document.createElement('img');
+                        img.src = src;
+                        img.className = 'w-full h-full object-cover';
+                        img.alt = 'Gallery Image';
+                        
+                        imgWrapper.appendChild(img);
+                        imgWrapper.addEventListener('click', () => openModal(src));
+                        
+                        allPhotosGrid.appendChild(imgWrapper);
+                    });
+                }
+                allPhotosModal.classList.remove('hidden');
+                allPhotosModal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            };
+
+            // The "All Photos" overlay on the last image should open the grid modal
+            const galleryOverlay = document.querySelector('.gallery-overlay');
+            if (galleryOverlay) {
+                galleryOverlay.addEventListener('click', openAllPhotosModal);
+            }
+
+            // Close events (X button or clicking outside the image)
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            if (viewAllPhotosBtn) viewAllPhotosBtn.addEventListener('click', openAllPhotosModal);
+            if (closeAllPhotosBtn) {
+                closeAllPhotosBtn.addEventListener('click', () => {
+                    allPhotosModal.classList.add('hidden');
+                    allPhotosModal.classList.remove('flex');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            // Nearby Places Toggle Logic
+            const togglePlacesBtn = document.getElementById('toggle-places-btn');
+            const morePlacesContainer = document.getElementById('more-places');
+            if (togglePlacesBtn && morePlacesContainer) {
+                togglePlacesBtn.addEventListener('click', () => {
+                    morePlacesContainer.classList.toggle('hidden');
+                    if (morePlacesContainer.classList.contains('hidden')) {
+                        togglePlacesBtn.innerHTML = 'Show more (12) <i class="fa-solid fa-chevron-down text-xs mt-0.5"></i>';
+                    } else {
+                        togglePlacesBtn.innerHTML = 'Show less <i class="fa-solid fa-chevron-up text-xs mt-0.5"></i>';
+                    }
+                });
+            }
+
+            // Native Share Logic
+            const shareBtn = document.getElementById('share-btn');
+            if (shareBtn) {
+                shareBtn.addEventListener('click', async () => {
+                    const shareData = {
+                        title: 'S S Homestay | Tirupati',
+                        text: 'Check out S S Homestay in Tirupati! A comfortable, clean, and budget-friendly stay.',
+                        url: window.location.href
+                    };
+                    
+                    try {
+                        if (navigator.share) {
+                            await navigator.share(shareData); // Opens native mobile share dialog
+                        } else {
+                            await navigator.clipboard.writeText(window.location.href); // Fallback for desktop
+                            alert('Link copied to clipboard!');
+                        }
+                    } catch (err) {
+                        console.error('Error sharing:', err);
+                    }
+                });
+            }
+
+            // Save / Bookmark Logic
+            const saveBtn = document.getElementById('save-btn');
+            if (saveBtn) {
+                saveBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+                    const shortcut = isMac ? 'Cmd + D' : 'Ctrl + D';
+                    alert(`Please press ${shortcut} on your keyboard to bookmark this page.`);
+                });
+            }
+
+            // Mobile Carousel Auto-Scroll and Dots
+            const carousel = document.getElementById('mobile-carousel');
+            const dots = document.querySelectorAll('.carousel-dot');
+            
+            if (carousel) {
+                // Update dots based on active slide
+                carousel.addEventListener('scroll', () => {
+                    if (dots.length > 0) {
+                        const activeIndex = Math.round((carousel.scrollLeft / carousel.scrollWidth) * dots.length);
+                        dots.forEach((dot, index) => {
+                            if (index === activeIndex) {
+                                dot.classList.replace('bg-white/50', 'bg-white/80');
+                            } else {
+                                dot.classList.replace('bg-white/80', 'bg-white/50');
+                            }
+                        });
+                    }
+                }, { passive: true });
+
+                // Auto-scroll logic (runs every 3.5 seconds)
+                let autoScroll = setInterval(() => {
+                    if (carousel.offsetParent !== null) { // Only triggers if mobile view is visible
+                        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                        if (carousel.scrollLeft >= maxScroll - 10) {
+                            carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                        } else {
+                            carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+                        }
+                    }
+                }, 3500);
+
+                // Pause auto-scroll permanently if user manually touches/swipes the carousel
+                carousel.addEventListener('touchstart', () => clearInterval(autoScroll), { passive: true });
+            }
+        });
+    </script>
+</body>
+</html>
